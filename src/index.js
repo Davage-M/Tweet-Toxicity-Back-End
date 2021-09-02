@@ -1,4 +1,4 @@
-require('dotenv').config()
+//require('dotenv').config()
 const express = require('express');
 const { getData } = require('./twitterUtils.js');
 const { getPredictions, loadModel } = require('./toxicityUtils.js');
