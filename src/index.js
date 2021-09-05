@@ -46,7 +46,7 @@ app.get('/search_tweets', async (req, res) => {
             throw new Error("Model not loaded");
         }
         if (!(requestQuery.twitter_handle.match(/^[a-z0-9_]{4,15}$/i))) {
-            throw new Error("Invalid Username");
+            throw new Error("Invalid Username (S)");
         }
 
         let val = await main(requestQuery.twitter_handle, pagination);
