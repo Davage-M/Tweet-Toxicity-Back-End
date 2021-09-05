@@ -29,13 +29,12 @@ exports.getData = async function (userName, pagination) {
         tweetData = await client.get(`users/${user.id}/tweets?tweet.fields=created_at&max_results=100`);
 
 
+        if (tweetData.errors) {
+            throw new Error(tweetData.errors[0].title);
+        }
 
         if (!(tweetData.data)) {
             throw new Error("User has no tweets");
-        }
-
-        if (tweetData.errors) {
-            throw new Error(tweetData.errors[0].title);
         }
 
 
@@ -74,7 +73,9 @@ exports.getData = async function (userName, pagination) {
 
     }
     catch (e) {
-
+        if (e.message === 'Authorization Error') {
+            return 'Account may be private'
+        }
         return e.message;
     }
 

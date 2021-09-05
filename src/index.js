@@ -4,7 +4,7 @@ const { getData } = require('./twitterUtils.js');
 const { getPredictions, loadModel } = require('./toxicityUtils.js');
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
 let model;
 
