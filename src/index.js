@@ -36,7 +36,7 @@ async function main(twitterHandle, pagination) {
 
 app.get('/search_tweets', async (req, res) => {
     //console.log("Loading Data........");
-    res.set('Access-Control-Allow-Origin', 'https://davage-m.github.io/Tweet-Toxicity-Front-End/');
+    res.set('Access-Control-Allow-Origin', 'https://davage-m.github.io');
     let requestQuery = req.query;
     let pagination = parseInt(requestQuery.pagination, 10);
 
