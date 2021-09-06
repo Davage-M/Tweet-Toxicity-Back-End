@@ -1,8 +1,5 @@
 require('@tensorflow/tfjs-node');
-const toxicity = require('@tensorflow-models/toxicity');
-
-
-
+const toxicity = require('@tensorflow-models/toxicity')
 
 exports.getPredictions = async function (toBeEval, model, id) {
     let predictionObject = {};
