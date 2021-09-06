@@ -1,1 +1,1 @@
-API for the tweet toxicity analyzer app
+Back end for the tweet toxicity analyzer app
