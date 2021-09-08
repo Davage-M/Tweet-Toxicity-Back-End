@@ -16,6 +16,7 @@ exports.getPredictions = async function (toBeEval, model, id) {
 
 exports.loadModel = async function () {
     const threshold = 0.95;
+
     let model = await toxicity.load(threshold);
 
     return model;
